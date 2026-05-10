@@ -1,6 +1,7 @@
 import { LocateFixed, Route, Sparkles } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import { PhoneFrame } from "../ui/PhoneFrame";
+import { publicPath } from "../../utils/paths";
 
 export function HeroPhoneMockup() {
   return (
@@ -18,7 +19,7 @@ export function HeroPhoneMockup() {
       </div>
       <PhoneFrame>
         <img
-          src="/assets/chinatown-smith-street.jpg"
+          src={publicPath("assets/chinatown-smith-street.jpg")}
           alt="Smith Street Chinatown present-day camera preview"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -46,7 +47,7 @@ export function HeroPhoneMockup() {
         </div>
         <div className="absolute -right-10 top-40 h-64 w-48 rotate-6 overflow-hidden rounded-lg border border-rice-paper/35 opacity-80 shadow-2xl">
           <img
-            src="/assets/heritage-shophouses.jpg"
+            src={publicPath("assets/heritage-shophouses.jpg")}
             alt="Ghosted old Singapore shophouse preview"
             className="h-full w-full object-cover sepia"
           />

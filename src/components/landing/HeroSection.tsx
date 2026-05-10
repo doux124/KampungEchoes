@@ -2,6 +2,7 @@ import { ArrowRight, MapPinned } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
 import { HeroPhoneMockup } from "./HeroPhoneMockup";
+import { publicPath } from "../../utils/paths";
 
 interface HeroSectionProps {
   onTryDemo: () => void;
@@ -13,7 +14,7 @@ export function HeroSection({ onTryDemo, onExplore }: HeroSectionProps) {
     <section className="relative isolate overflow-hidden bg-charcoal pt-24">
       <div className="absolute inset-0 -z-20">
         <img
-          src="/assets/heritage-shophouses.jpg"
+          src={publicPath("assets/heritage-shophouses.jpg")}
           alt="Restored Singapore shophouses used as a cinematic heritage backdrop"
           className="h-full w-full object-cover opacity-34"
         />

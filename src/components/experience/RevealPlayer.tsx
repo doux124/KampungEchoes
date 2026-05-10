@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { ArrowLeft, List, RotateCcw } from "lucide-react";
 import { Button } from "../ui/Button";
 import { EmptyState } from "../ui/EmptyState";
+import { publicPath } from "../../utils/paths";
 
 interface RevealPlayerProps {
   onReturnToPresent: () => void;
@@ -25,7 +26,7 @@ export function RevealPlayer({ onReturnToPresent, onChooseAnother }: RevealPlaye
         <video
           ref={videoRef}
           className="h-full w-full object-cover"
-          src="/demo/past-reveal.mp4"
+          src={publicPath("demo/past-reveal.mp4")}
           controls
           autoPlay
           playsInline

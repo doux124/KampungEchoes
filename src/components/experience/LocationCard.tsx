@@ -2,6 +2,7 @@ import { ArrowRight, Clock, LockKeyhole, MapPin } from "lucide-react";
 import type { LocationData } from "../../types";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
+import { publicPath } from "../../utils/paths";
 
 interface LocationCardProps {
   location: LocationData;
@@ -15,7 +16,7 @@ export function LocationCard({ location, onSelect }: LocationCardProps) {
   return (
     <article className="group relative min-h-[440px] overflow-hidden rounded-lg border border-white/12 bg-charcoal shadow-2xl shadow-black/25">
       <img
-        src={location.image}
+        src={publicPath(location.image)}
         alt={`${location.area} location preview`}
         className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105"
         loading="lazy"
