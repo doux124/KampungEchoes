@@ -16,6 +16,8 @@ const run = (command, args, cwd = publishDir) => {
 
 await cp(join(distDir, "index.html"), join(publishDir, "index.html"));
 await cp(join(distDir, "404.html"), join(publishDir, "404.html"));
+await cp(join(distDir, "favicon.svg"), join(publishDir, "favicon.svg"));
+await cp(join(distDir, "favicon.ico"), join(publishDir, "favicon.ico"));
 await cp(join(distDir, "assets"), join(publishDir, "assets"), { recursive: true });
 await cp(join(distDir, "demo"), join(publishDir, "demo"), { recursive: true });
 await writeFile(join(publishDir, ".nojekyll"), "");
