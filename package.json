@@ -9,7 +9,7 @@
     "build:gh-pages": "tsc -b && VITE_BASE_PATH=/KampungEchoes/ vite build",
     "preview": "vite preview",
     "predeploy": "npm run build:gh-pages",
-    "deploy": "gh-pages -d dist"
+    "deploy": "node scripts/deploy-gh-pages.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
